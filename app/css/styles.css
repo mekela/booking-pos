@@ -193,6 +193,7 @@ h1, h2, h3, h4, h5, h6, a, span, a:focus {
 body {
   padding: 0;
   margin: 0;
+  background: #f8fafb;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -560,3 +561,269 @@ textarea {
   overflow: hidden; }
 
 /*----------end footer----------*/
+.availability-header {
+  padding: 40px 0 0 0; }
+  .availability-header__section {
+    box-shadow: 0 10px 20px rgba(93, 119, 254, 0.1);
+    height: calc(100% - 30px);
+    margin-bottom: 30px;
+    padding: 30px 45px;
+    border-radius: 12px; }
+    @media only screen and (max-width: 575px) {
+      .availability-header__section {
+        padding: 15px; } }
+  .availability-header__title {
+    font-size: 24px;
+    color: #4f5566;
+    padding-bottom: 20px; }
+    @media only screen and (max-width: 992px) {
+      .availability-header__title {
+        text-align: center; } }
+  .availability-header__subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4f5566; }
+  .availability-header__mode {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .availability-header__mode strong {
+      font-size: 15px;
+      color: #6c758c;
+      padding-right: 10px; }
+  .availability-header__nav-arrows {
+    display: block;
+    margin-top: 12px;
+    font-size: 15px;
+    color: #6c758c;
+    margin-left: -10px;
+    margin-right: -10px;
+    text-decoration: none; }
+    .availability-header__nav-arrows i {
+      padding: 0  10px; }
+  .availability-header__search {
+    font-size: 15px;
+    color: #4f5566;
+    margin-bottom: 5px; }
+    .availability-header__search input {
+      width: 100%;
+      border: 1px solid #0883ed;
+      border-radius: 6px;
+      height: 38px;
+      padding: 0 10px 0 40px;
+      font-size: 15px;
+      color: #6c758c;
+      background: #fff url(../img/search-ico.png) no-repeat 12px center; }
+    @media only screen and (max-width: 1200px) {
+      .availability-header__search {
+        font-size: 12px; } }
+  .availability-header__buttons {
+    display: flex;
+    padding-top: 40px;
+    justify-content: space-between; }
+    @media only screen and (max-width: 575px) {
+      .availability-header__buttons {
+        padding-top: 20px;
+        display: block; } }
+    .availability-header__buttons .button {
+      font-size: 13px;
+      color: #ffffff;
+      height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 48%;
+      border: 1px solid #0883ed;
+      background: #0883ed; }
+      .availability-header__buttons .button.empty {
+        background: #fff;
+        color: #0883ed; }
+        .availability-header__buttons .button.empty:hover {
+          background: #0883ed;
+          color: #fff; }
+      .availability-header__buttons .button i {
+        padding-right: 10px; }
+      .availability-header__buttons .button:hover {
+        background: #fff;
+        color: #0883ed; }
+      @media only screen and (max-width: 575px) {
+        .availability-header__buttons .button {
+          width: 100%;
+          margin-bottom: 10px; } }
+
+.custom-checkbox {
+  display: block;
+  min-width: 50px;
+  min-height: 26px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px; }
+  .custom-checkbox__inner {
+    width: 50px;
+    height: 26px;
+    border-radius: 12px;
+    background: #b8bdcc;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s; }
+    .custom-checkbox__inner:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      background: #fff;
+      border-radius: 50%;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      transition: all 0.5s; }
+  .custom-checkbox input {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    cursor: pointer; }
+    .custom-checkbox input:checked + .custom-checkbox__inner {
+      background: #0883ed; }
+      .custom-checkbox input:checked + .custom-checkbox__inner:before {
+        left: 27px; }
+
+.input-date {
+  padding-top: 20px; }
+  .input-date label {
+    display: block;
+    font-size: 15px;
+    color: #4f5566;
+    padding-bottom: 9px; }
+  .input-date input {
+    width: 100%;
+    height: 38px;
+    border: 1px solid #0883ed;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0 5px 0 40px;
+    font-size: 15px;
+    color: #0883ed;
+    font-weight: 500;
+    background: url(../img/calend-ico.png) no-repeat 15px center; }
+
+.availability-table {
+  box-shadow: 0 10px 20px rgba(93, 119, 254, 0.1);
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff; }
+  @media only screen and (max-width: 575px) {
+    .availability-table {
+      overflow-y: auto; } }
+  .availability-table table {
+    width: 100%;
+    background: #fff; }
+    @media only screen and (max-width: 575px) {
+      .availability-table table {
+        width: 700px; } }
+    .availability-table table tr:nth-child(2n) td {
+      background: #f9fafe; }
+    .availability-table table tr:last-child .availability-table__popup {
+      top: auto;
+      bottom: 0; }
+    .availability-table table th {
+      font-size: 15px;
+      color: #808aa6;
+      text-align: left;
+      font-weight: normal;
+      vertical-align: middle;
+      padding: 15px; }
+      @media only screen and (max-width: 992px) {
+        .availability-table table th {
+          font-size: 12px;
+          padding: 10px; } }
+    .availability-table table td {
+      padding: 15px;
+      vertical-align: middle;
+      font-size: 18px;
+      color: #4f5566;
+      font-weight: 500;
+      position: relative;
+      height: 70px; }
+      @media only screen and (max-width: 992px) {
+        .availability-table table td {
+          font-size: 12px;
+          padding: 10px;
+          height: 40px; } }
+      .availability-table table td strong {
+        font-size: 18px;
+        color: #0883ed;
+        display: block;
+        text-align: center; }
+        @media only screen and (max-width: 992px) {
+          .availability-table table td strong {
+            font-size: 12px; } }
+      .availability-table table td:last-child .availability-table__popup, .availability-table table td:nth-child(8) .availability-table__popup, .availability-table table td:nth-child(7) .availability-table__popup, .availability-table table td:nth-child(6) .availability-table__popup {
+        left: -380px; }
+        @media only screen and (max-width: 992px) {
+          .availability-table table td:last-child .availability-table__popup, .availability-table table td:nth-child(8) .availability-table__popup, .availability-table table td:nth-child(7) .availability-table__popup, .availability-table table td:nth-child(6) .availability-table__popup {
+            left: -200px; } }
+  .availability-table__reserv {
+    background: #0883ed;
+    width: 100%;
+    height: 100%;
+    display: block;
+    min-height: 60px;
+    border-radius: 8px;
+    cursor: pointer; }
+    .availability-table__reserv:hover + .availability-table__popup {
+      display: block; }
+    @media only screen and (max-width: 992px) {
+      .availability-table__reserv {
+        min-height: 40px; } }
+  .availability-table__popup {
+    position: absolute;
+    top: 14px;
+    left: 100%;
+    width: 380px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 20px rgba(93, 119, 254, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    background: #fff;
+    z-index: 10;
+    font-size: 15px;
+    color: #4f5566;
+    font-weight: 300;
+    display: none; }
+    @media only screen and (max-width: 992px) {
+      .availability-table__popup {
+        width: 200px;
+        font-size: 12px;
+        padding: 10px;
+        border-radius: 6px; } }
+    .availability-table__popup:before {
+      border-top: 4px solid #0883ed;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0px;
+      top: 0;
+      left: 0;
+      border-radius: 4px; }
+    .availability-table__popup h6 {
+      font-size: 18px;
+      color: #6c758c;
+      padding-bottom: 8px; }
+      @media only screen and (max-width: 992px) {
+        .availability-table__popup h6 {
+          font-size: 14px; } }
+    .availability-table__popup b {
+      font-weight: 500; }
+    .availability-table__popup .row {
+      padding-bottom: 8px; }

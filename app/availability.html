@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="initial-scale=1"/>
+  <title>title</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <!--build:css css/styles.min.css-->
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <!--endbuild-->
+</head>
+<body>
+<div class="wrapper">
+<!--header-->
+<header class="header">
+  <img src="img/header.jpg" alt="" class="header__img">
+</header>
+<!--end-header-->
+<!--main-->
+<div class="main">
+
+   
+<!-- head -->
+<div class="availability-header">
+    <div class="container-fluid">
+        <h2 class="availability-header__title">Availability Hour Grid</h2>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="availability-header__section">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="availability-header__subtitle">Dates</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="availability-header__mode">
+                                <strong>One Day Mode</strong>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox__inner"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="input-date">
+                                <label>Start Date</label>
+                                <input type="date" >
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-date">
+                                <label>End Date</label>
+                                <input type="date" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="#" class="availability-header__nav-arrows"><i class="fas fa-long-arrow-alt-left"></i>Previous</a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="availability-header__nav-arrows text_right">Next<i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="availability-header__section">
+                    <div class="availability-header__subtitle">Search</div>
+                    <div class="row align-items-center availability-header__search">
+                        <div class="col-md-4">Guest Name</div>
+                        <div class="col-md-8">
+                            <input type="text" placeholder="Search Guest Contacts.. ">
+                        </div>
+                    </div>
+                    <div class="row align-items-center availability-header__search">
+                        <div class="col-md-4">Room Type</div>
+                        <div class="col-md-8">
+                            <input type="text" placeholder="Search Room Types.. ">
+                        </div>
+                    </div>
+                    <div class="row align-items-center availability-header__search">
+                        <div class="col-md-4">Property</div>
+                        <div class="col-md-8">
+                            <input type="text" placeholder="Search Properties.. ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="availability-header__section">
+                    <div class="availability-header__subtitle">Actions</div>
+                    <div class="availability-header__buttons">
+                        <a href="#" class="button"><i class="fas fa-plus"></i>New Reservation</a>
+                        <a href="#" class="button empty"><i class="fas fa-plus"></i>Create Invoice</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /head -->
+<!-- content -->
+<div class="container-fluid">
+<div class="availability-table">
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Mon <br>
+                    2019-10-21</th>
+            <th>Tue <br>
+                    2019-10-22</th>
+            <th>Wed <br>
+                    2019-10-23</th>
+            <th>Thu <br>
+                    2019-10-24</th>
+            <th>Fri <br>
+                    2019-10-25</th>
+            <th>Sat <br>
+                    2019-10-26</th>
+            <th>Sun <br>
+                    2019-10-27</th>
+        </tr>
+        <tr>
+            <td>Firepit Lounge</td>
+            <td>
+                <div class="availability-table__reserv"></div>
+                <div class="availability-table__popup">
+                    <h6>Reservation</h6>
+                    <div class="row">
+                        <div class="col-sm-6">Guest Name:</div>
+                        <div class="col-sm-6"><b>Guido van de Laar</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Reservation Begin:</div>
+                        <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Reservation End:</div>
+                        <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Status:</div>
+                        <div class="col-sm-6"><b>Confirmed</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Payment Info:</div>
+                        <div class="col-sm-6"><b>$200</b></div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>Firepit Lounge</td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>Pickleball Court</td>
+            <td>
+                <div class="availability-table__reserv"></div>
+                <div class="availability-table__popup">
+                    <h6>Reservation</h6>
+                    <div class="row">
+                        <div class="col-sm-6">Guest Name:</div>
+                        <div class="col-sm-6"><b>Guido van de Laar</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Reservation Begin:</div>
+                        <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Reservation End:</div>
+                        <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Status:</div>
+                        <div class="col-sm-6"><b>Confirmed</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Payment Info:</div>
+                        <div class="col-sm-6"><b>$200</b></div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <div class="availability-table__reserv"></div>
+                <div class="availability-table__popup">
+                    <h6>Reservation</h6>
+                    <div class="row">
+                        <div class="col-sm-6">Guest Name:</div>
+                        <div class="col-sm-6"><b>Guido van de Laar</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Reservation Begin:</div>
+                        <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Reservation End:</div>
+                        <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Status:</div>
+                        <div class="col-sm-6"><b>Confirmed</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Payment Info:</div>
+                        <div class="col-sm-6"><b>$200</b></div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>Pickleball Court</td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                    <div class="availability-table__reserv"></div>
+                    <div class="availability-table__popup">
+                        <h6>Reservation</h6>
+                        <div class="row">
+                            <div class="col-sm-6">Guest Name:</div>
+                            <div class="col-sm-6"><b>Guido van de Laar</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Reservation Begin:</div>
+                            <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Reservation End:</div>
+                            <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Status:</div>
+                            <div class="col-sm-6"><b>Confirmed</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Payment Info:</div>
+                            <div class="col-sm-6"><b>$200</b></div>
+                        </div>
+                    </div>
+            </td>
+            <td>
+                    <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                    <div class="availability-table__reserv"></div>
+                    <div class="availability-table__popup">
+                        <h6>Reservation</h6>
+                        <div class="row">
+                            <div class="col-sm-6">Guest Name:</div>
+                            <div class="col-sm-6"><b>Guido van de Laar</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Reservation Begin:</div>
+                            <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Reservation End:</div>
+                            <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Status:</div>
+                            <div class="col-sm-6"><b>Confirmed</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Payment Info:</div>
+                            <div class="col-sm-6"><b>$200</b></div>
+                        </div>
+                    </div>
+            </td>
+            <td>
+                    <div class="availability-table__reserv"></div>
+                    <div class="availability-table__popup">
+                        <h6>Reservation</h6>
+                        <div class="row">
+                            <div class="col-sm-6">Guest Name:</div>
+                            <div class="col-sm-6"><b>Guido van de Laar</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Reservation Begin:</div>
+                            <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Reservation End:</div>
+                            <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Status:</div>
+                            <div class="col-sm-6"><b>Confirmed</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Payment Info:</div>
+                            <div class="col-sm-6"><b>$200</b></div>
+                        </div>
+                    </div>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>Foodtruck Area</td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>Foodtruck Area</td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>Event Plaza: Farmer’s Market</td>
+            <td>
+                <div class="availability-table__reserv"></div>
+                <div class="availability-table__popup">
+                    <h6>Reservation</h6>
+                    <div class="row">
+                        <div class="col-sm-6">Guest Name:</div>
+                        <div class="col-sm-6"><b>Guido van de Laar</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Reservation Begin:</div>
+                        <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Reservation End:</div>
+                        <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Status:</div>
+                        <div class="col-sm-6"><b>Confirmed</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Payment Info:</div>
+                        <div class="col-sm-6"><b>$200</b></div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>Firepit Lounge</td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>Event Plaza: Farmer’s Market</td>
+            <td>
+                <div class="availability-table__reserv"></div>
+                <div class="availability-table__popup">
+                    <h6>Reservation</h6>
+                    <div class="row">
+                        <div class="col-sm-6">Guest Name:</div>
+                        <div class="col-sm-6"><b>Guido van de Laar</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Reservation Begin:</div>
+                        <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Reservation End:</div>
+                        <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Status:</div>
+                        <div class="col-sm-6"><b>Confirmed</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Payment Info:</div>
+                        <div class="col-sm-6"><b>$200</b></div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <div class="availability-table__reserv"></div>
+                <div class="availability-table__popup">
+                    <h6>Reservation</h6>
+                    <div class="row">
+                        <div class="col-sm-6">Guest Name:</div>
+                        <div class="col-sm-6"><b>Guido van de Laar</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Reservation Begin:</div>
+                        <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Reservation End:</div>
+                        <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Status:</div>
+                        <div class="col-sm-6"><b>Confirmed</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Payment Info:</div>
+                        <div class="col-sm-6"><b>$200</b></div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>Firepit Lounge</td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                    <div class="availability-table__reserv"></div>
+                    <div class="availability-table__popup">
+                        <h6>Reservation</h6>
+                        <div class="row">
+                            <div class="col-sm-6">Guest Name:</div>
+                            <div class="col-sm-6"><b>Guido van de Laar</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Reservation Begin:</div>
+                            <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Reservation End:</div>
+                            <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Status:</div>
+                            <div class="col-sm-6"><b>Confirmed</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Payment Info:</div>
+                            <div class="col-sm-6"><b>$200</b></div>
+                        </div>
+                    </div>
+            </td>
+            <td>
+                    <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                    <div class="availability-table__reserv"></div>
+                    <div class="availability-table__popup">
+                        <h6>Reservation</h6>
+                        <div class="row">
+                            <div class="col-sm-6">Guest Name:</div>
+                            <div class="col-sm-6"><b>Guido van de Laar</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Reservation Begin:</div>
+                            <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Reservation End:</div>
+                            <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Status:</div>
+                            <div class="col-sm-6"><b>Confirmed</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Payment Info:</div>
+                            <div class="col-sm-6"><b>$200</b></div>
+                        </div>
+                    </div>
+            </td>
+            <td>
+                    <div class="availability-table__reserv"></div>
+                    <div class="availability-table__popup">
+                        <h6>Reservation</h6>
+                        <div class="row">
+                            <div class="col-sm-6">Guest Name:</div>
+                            <div class="col-sm-6"><b>Guido van de Laar</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Reservation Begin:</div>
+                            <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Reservation End:</div>
+                            <div class="col-sm-6"><b>10/21/2019 12:00 AM</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Status:</div>
+                            <div class="col-sm-6"><b>Confirmed</b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">Payment Info:</div>
+                            <div class="col-sm-6"><b>$200</b></div>
+                        </div>
+                    </div>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>Bocce Ball Court</td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>Bocce Ball Court</td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+            <td>
+                <strong>$150</strong>
+            </td>
+        </tr>
+    </table>
+</div>
+</div>
+<!-- /content -->
+
+
+
+</div>
+<!--end-main-->
+<!--footer-->
+<footer class="footer">
+
+</footer>
+<!--end-footer-->
+</div>
+
+<!--SCRIPT -->
+<script src="js/jquery.js"></script> 
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+<!--build:js js/main.min.js -->
+<script src="js/slick.js"></script>
+<!-- endbuild -->
+<script src="js/common.js"></script>
+<!--[if IE]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- END OF SCRIPT -->
+
+</body>
+</html>

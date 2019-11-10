@@ -251,6 +251,8 @@
 				}
 			}
 		}
+	
+		
 /*----------end main----------*/	
 
 	
@@ -261,3 +263,307 @@
  }
 
 /*----------end footer----------*/
+
+.availability-header{
+	padding: 40px 0 0 0;
+	&__section{
+		box-shadow: 0 10px 20px rgba($color: #5d77fe, $alpha: .1); 
+		height: calc(100% - 30px);
+		margin-bottom: 30px;
+		padding: 30px 45px; 
+		border-radius: 12px;
+		@include mq($max-width: 575px) {
+			padding: 15px;
+		}
+	}
+	&__title{
+		font-size: 24px;
+		color: #4f5566;
+		padding-bottom: 20px;
+		@include mq($max-width: 992px) {
+			text-align: center;
+		}
+	}
+	&__subtitle{
+		font-size: 20px;
+		font-weight: bold;
+		color: #4f5566;
+	}
+	&__mode{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		strong{
+			font-size: 15px;
+			color: #6c758c;
+			padding-right: 10px;
+		}
+	}
+	&__nav-arrows{
+		display: block;
+		margin-top: 12px;
+		font-size: 15px;
+		color: #6c758c; 
+		margin-left: -10px;
+		margin-right: -10px;
+		text-decoration: none;
+		i{
+			padding:0  10px;
+		}
+	}
+	&__search{
+		input{
+			width: 100%;
+			border: 1px solid #0883ed;
+			border-radius: 6px;
+			height: 38px;
+			padding: 0 10px 0 40px;
+			font-size: 15px;
+			color: #6c758c;
+			background: #fff url(../img/search-ico.png) no-repeat 12px center;
+		}
+		font-size: 15px;
+		color: #4f5566;
+		margin-bottom: 5px;
+		@include mq($max-width: 1200px) {
+			font-size: 12px;
+		}
+	}
+	&__buttons{
+		display: flex;
+		padding-top: 40px;
+		justify-content: space-between;
+		@include mq($max-width: 575px) {
+			padding-top: 20px;
+			display: block;
+		}
+		.button{
+			font-size: 13px;
+			color: #ffffff;
+			height: 55px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 48%;
+			border: 1px solid #0883ed;
+			background: #0883ed;
+			&.empty{
+				background: #fff;
+				color: #0883ed;
+				&:hover{
+					background: #0883ed;
+					color: #fff;
+				}
+			}
+			i{
+				padding-right: 10px;
+			}
+			&:hover{
+				background: #fff;
+				color: #0883ed;
+			}
+			@include mq($max-width: 575px) {
+				width: 100%;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+	.custom-checkbox{
+		display: block;
+		min-width: 50px;
+		min-height: 26px;
+		position: relative;
+		overflow: hidden;
+		border-radius: 12px;
+		&__inner{
+			width: 50px;
+			height: 26px;
+			border-radius: 12px;
+			background: #b8bdcc;
+			display: block;
+			position: relative;
+			overflow: hidden;
+			@include transition(all 0.5s);
+			&:before{
+				content: '';
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				left: 3px;
+				top: 3px;
+				background: #fff;
+				border-radius: 50%;
+				@include transition(all 0.5s);
+			}
+		}
+		input{
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			cursor: pointer;
+			&:checked + .custom-checkbox__inner{
+				background: #0883ed;
+				&:before{
+					left: 27px;
+				}
+			}
+		}
+	}
+	.input-date{
+		padding-top: 20px;
+		label{
+			display: block;
+			font-size: 15px;
+			color: #4f5566;
+			padding-bottom: 9px;
+		}
+		input{
+			width: 100%;
+			height: 38px;
+			border: 1px solid #0883ed;
+			text-align: center;
+			border-radius: 6px;
+			padding: 0 5px 0 40px;
+			font-size: 15px;
+			color: #0883ed;
+			font-weight: 500;
+			background: url(../img/calend-ico.png) no-repeat 15px center ;
+		}
+	}
+.availability-table{
+	box-shadow: 0 10px 20px rgba($color: #5d77fe, $alpha: .1); 
+	margin-bottom: 30px;
+	padding: 20px ; 
+	border-radius: 12px;
+	background: #fff;
+	@include mq($max-width: 575px) {
+		overflow-y: auto;
+	}
+	table{
+		width: 100%;
+		background: #fff;
+		@include mq($max-width: 575px) {
+			width: 700px;
+		}
+		tr{
+			&:nth-child(2n){
+				td{
+					background: #f9fafe;
+				}
+			}
+			&:last-child{
+				.availability-table__popup{
+					top: auto;
+					bottom: 0;
+				}
+			}
+		}
+		th{
+			font-size: 15px;
+			color: #808aa6;
+			text-align: left;
+			font-weight: normal;
+			vertical-align: middle;
+			padding: 15px;
+			@include mq($max-width: 992px) {
+				font-size: 12px;
+				padding: 10px;
+			}
+		}
+		td{
+			padding: 15px;
+			vertical-align: middle;
+			font-size: 18px;
+			color: #4f5566;
+			font-weight: 500;
+			position: relative;
+			height: 70px;
+			@include mq($max-width: 992px) {
+				font-size: 12px;
+				padding: 10px;
+				height: 40px;
+			}
+			strong{
+				font-size: 18px;
+				color: #0883ed;
+				display: block;
+				text-align: center;
+				@include mq($max-width: 992px) {
+					font-size: 12px;
+				}
+			}
+			&:last-child, &:nth-child(8), &:nth-child(7), &:nth-child(6){
+				.availability-table__popup{
+					left: -380px;
+					@include mq($max-width: 992px) {
+						left: -200px;
+					}
+				}
+			}
+		}
+	}
+	&__reserv{
+		background: #0883ed;
+		width: 100%;
+		height: 100%;
+		display: block;
+		min-height: 60px;
+		border-radius: 8px;
+		cursor: pointer;
+		&:hover + .availability-table__popup{
+			display: block;
+		}
+		@include mq($max-width: 992px) {
+			min-height: 40px;
+		}
+	}
+	&__popup{
+		position: absolute;
+		top: 14px;
+		left: 100%;
+		width: 380px;
+		box-sizing: border-box;
+		box-shadow: 0 10px 20px rgba($color: #5d77fe, $alpha: .1); 
+		padding: 20px ; 
+		border-radius: 12px;
+		background: #fff;
+		z-index: 10;
+		font-size: 15px;
+		color: #4f5566;
+		font-weight: 300;
+		display: none;
+		@include mq($max-width: 992px) {
+			width: 200px;
+			font-size: 12px;
+			padding: 10px;
+			border-radius: 6px;
+		}
+		&:before{
+			border-top: 4px solid #0883ed;
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 0px;
+			top: 0;
+			left: 0;
+			border-radius: 4px;
+		}
+		h6{
+			font-size: 18px;
+			color: #6c758c;
+			padding-bottom: 8px;
+			@include mq($max-width: 992px) {
+				font-size: 14px;
+			}
+		}
+		b{
+			font-weight: 500;
+		}
+		.row{
+			padding-bottom: 8px;
+		}
+	}
+}
